@@ -4,15 +4,15 @@
 export JAVA_OPTS="-Xmx200g"
 
 # Paths
-CONFIG_FILE="/path/to/your/config.yaml"
+CONFIG_FILE="config/config_paths_PHG.yaml"
 
-phgv2_path=$(yq '.phgv2_path' "$CONFIG_FILE")
-hvcf_dir=$(yq '.hvcf_dir' "$CONFIG_FILE")
-index_file=$(yq '.index_file' "$CONFIG_FILE")
-key_file=$(yq '.key_file' "$CONFIG_FILE")
-output_dir=$(yq '.output_dir' "$CONFIG_FILE")
-min_mem_length=$(yq '.min_mem_length' "$CONFIG_FILE")
-threads_readmapping=$(yq '.threads_readmapping' "$CONFIG_FILE")
+phgv2_path=$(yq -r '.phgv2_path' "$CONFIG_FILE")
+hvcf_dir=$(yq -r '.hvcf_dir' "$CONFIG_FILE")
+index_file=$(yq -r '.index_file' "$CONFIG_FILE")
+key_file=$(yq -r '.key_file' "$CONFIG_FILE")
+output_dir=$(yq -r '.output_dir' "$CONFIG_FILE")
+min_mem_length=$(yq -r '.min_mem_length' "$CONFIG_FILE")
+threads_readmapping=$(yq -r '.threads_readmapping' "$CONFIG_FILE")
 
 # Create output directory if it doesn't exist
 mkdir -p $OUTPUT_DIR

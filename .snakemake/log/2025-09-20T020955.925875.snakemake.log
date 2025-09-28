@@ -1,0 +1,24 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+filter_vcf        1
+total             1
+
+Select jobs to execute...
+
+[Sat Sep 20 02:09:56 2025]
+rule filter_vcf:
+    input: scripts/07_filtervcffile.sh
+    output: output/filter_vcf.done
+    jobid: 0
+    reason: Updated input files: scripts/07_filtervcffile.sh
+    resources: tmpdir=/tmp
+
+[Sat Sep 20 02:09:56 2025]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2025-09-20T020955.925875.snakemake.log

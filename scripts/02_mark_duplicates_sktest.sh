@@ -6,13 +6,14 @@
 ## This script marks duplicated reads in BAM alignments before using GATK tools
 
 # Path to the config file
-config_file="/home/hamzaamhal/snakemake_pipline2/config/config_paths.yaml"
+config_file="config/config_paths.yaml"
 
 # Read values from YAML config file
-output_dir_markdup=$(yq eval '.output_dir_markdup' $config_file)
-metrics_dir=$(yq eval '.metrics_dir' $config_file)
-bam_dir=$(yq eval '.bam_dir' $config_file)
-variant_calling_list=$(yq eval '.variant_calling_list' $config_file)
+# Read values from YAML config file
+output_dir_markdup=$(yq -r '.output_dir_markdup' "$config_file")
+metrics_dir=$(yq -r '.metrics_dir' "$config_file")
+bam_dir=$(yq -r '.bam_dir' "$config_file")
+variant_calling_list=$(yq -r '.variant_calling_list' "$config_file")
 
 # Check if any variable is empty (which means the value wasn't found in the config file)
 if [ -z "$output_dir_markdup" ] || [ -z "$metrics_dir" ] || [ -z "$bam_dir" ] || [ -z "$variant_calling_list" ]; then
@@ -43,7 +44,7 @@ while IFS= read -r sample; do
     fi
 
     # Run Picard MarkDuplicates
-    java -jar /home/rsancho/software/picard.jar MarkDuplicates \
+/usr/bin/java -jar /home/hamza/miniconda3/envs/phgtools/share/picard-3.4.0-0/picard.jar MarkDuplicates  \
           --INPUT "$input_bam" \
           --OUTPUT "$output_dir_markdup/$name.sort.markdup.bam" \
           --METRICS_FILE "$metrics_dir/$name.metrics.txt" \

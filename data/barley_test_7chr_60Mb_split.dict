@@ -1,0 +1,15 @@
+@HD	VN:1.6
+@SQ	SN:chr1H_part1	LN:30000000	M5:f43334296e2d4f857e8efe44f806e389	UR:file:///home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/data/barley_test_7chr_60Mb_split.fa
+@SQ	SN:chr1H_part2	LN:30000000	M5:0635f2fd7bf00fe517704851ff5e2691	UR:file:///home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/data/barley_test_7chr_60Mb_split.fa
+@SQ	SN:chr2H_part1	LN:30000000	M5:2ffcb1e3ea01999fa358fc16fdc83de5	UR:file:///home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/data/barley_test_7chr_60Mb_split.fa
+@SQ	SN:chr2H_part2	LN:30000000	M5:90d2650b8a45a03879cf61d42887f6a6	UR:file:///home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/data/barley_test_7chr_60Mb_split.fa
+@SQ	SN:chr3H_part1	LN:30000000	M5:027e7448130be9dcb4482a6e7b94ca76	UR:file:///home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/data/barley_test_7chr_60Mb_split.fa
+@SQ	SN:chr3H_part2	LN:30000000	M5:42a8f80146fb4c46f70c36865de95a7a	UR:file:///home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/data/barley_test_7chr_60Mb_split.fa
+@SQ	SN:chr4H_part1	LN:30000000	M5:fe0b6e99a9d75a12b43a67dfa10052af	UR:file:///home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/data/barley_test_7chr_60Mb_split.fa
+@SQ	SN:chr4H_part2	LN:30000000	M5:f8961fac8e658805ff81c635cdf370a4	UR:file:///home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/data/barley_test_7chr_60Mb_split.fa
+@SQ	SN:chr5H_part1	LN:30000000	M5:8695d6e3f1f16b171aaf2befceefc03e	UR:file:///home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/data/barley_test_7chr_60Mb_split.fa
+@SQ	SN:chr5H_part2	LN:30000000	M5:c5712146de5d83facb0ad6fd702d97bf	UR:file:///home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/data/barley_test_7chr_60Mb_split.fa
+@SQ	SN:chr6H_part1	LN:30000000	M5:6298d01117e831e40a1f8443d06a2ddf	UR:file:///home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/data/barley_test_7chr_60Mb_split.fa
+@SQ	SN:chr6H_part2	LN:30000000	M5:2d7a9e0fa411c35703ab280194443cb2	UR:file:///home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/data/barley_test_7chr_60Mb_split.fa
+@SQ	SN:chr7H_part1	LN:30000000	M5:2d22bbc1f896f60c06604b13b4ded22a	UR:file:///home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/data/barley_test_7chr_60Mb_split.fa
+@SQ	SN:chr7H_part2	LN:30000000	M5:ba5895187cc3da831576ba87b8b24d4d	UR:file:///home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/data/barley_test_7chr_60Mb_split.fa

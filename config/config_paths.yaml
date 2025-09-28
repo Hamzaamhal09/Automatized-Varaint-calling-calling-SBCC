@@ -1,95 +1,124 @@
 # config_paths.yaml
 
 # Reference genome
-reference_genome: "/data/hamza/reference/barley_v3_split_2_parts.fa"
+reference_genome: data/barley_test_7chr_60Mb_split.fa
 
 #chr name list
-CHROMOSOMES:
-  - chr1H_0
-  - chr1H_1
-  - chr2H_0
-  - chr2H_1
-  - chr3H_0
-  - chr3H_1
-  - chr4H_0
-  - chr4H_1
-  - chr5H_0
-  - chr5H_1
-  - chr6H_0
-  - chr6H_1
-  - chr7H_0
-  - chr7H_1
-  - chrUn
+CHROMOSOMES: # changed from mapping for names of chr
+  - chr1H_part1
+  - chr1H_part2
+  - chr2H_part1
+  - chr2H_part2
+  - chr3H_part1
+  - chr3H_part2
+  - chr4H_part1
+  - chr4H_part2
+  - chr5H_part1
+  - chr5H_part2
+  - chr6H_part1
+  - chr6H_part2
+  - chr7H_part1
+  - chr7H_part2
 
+CHROMOSOMES_length:
+  - name: chr1H
+    size: 60000000
+  - name: chr2H
+    size: 60000000
+  - name: chr3H
+    size: 60000000
+  - name: chr4H
+    size: 60000000
+  - name: chr5H
+    size: 60000000
+  - name: chr6H
+    size: 60000000
+  - name: chr7H
+    size: 60000000
 
 
 # Info file
 #mapping
-info_file: "/home/hamzaamhal/snakemake_pipline2/info_files/INFO_FILE_FINA.txt" # info file for mapping 
+info_file: info_files/INFO_FILE_FINAL.txt # info file for mapping 
 #
-variant_calling_list: "/home/hamzaamhal/snakemake_pipline2/info_files/Variant_calling_list.txt"
-INTERVAL_LIST: "/home/hamzaamhal/snakemake_pipline2/info_files/interval2.list"
-SAMPLE_MAP: "/home/hamzaamhal/snakemake_pipline2/info_files/cohort.sample_map.list"
-BED_FILE: "/home/hamzaamhal/variant_calling/barley_v3_split_2_parts_to_full_chromosomes.bed"
+variant_calling_list: info_files/Variant_calling_list.txt
+INTERVAL_LIST: info_files/interval2.list
+SAMPLE_MAP: info_files/cohort.sample_map.list
+BED_FILE: info_files/bedfile_fullchr.bed
 
 # Directories
 #mapping
 
-bam_dir: "/data/hamza/test_snakemake_dir/mapping/bam_files"
-flagstat_dir: "/data/hamza/test_snakemake_dir/mapping/flagstat"
-index_dir: "/data/hamza/test_snakemake_dir/mapping/index"
-idxstats_dir: "/data/hamza/test_snakemake_dir/mapping/idxstats"
+bam_dir: results/mapping/bam_files
+flagstat_dir: results/mapping/flagstat
+index_dir: results/mapping/index
+idxstats_dir: results/mapping/idxstats
 
 #markdup
 
-output_dir_markdup: "/data/hamza/test_snakemake_dir/markduplicate/bam_dup" #markduplicates output files
-metrics_dir: "/data/hamza/test_snakemake_dir/metrics_files1" #metrics of markduplicates
+output_dir_markdup: results/markduplicate/bam_dup #markduplicates output files
+metrics_dir: results/metrics_files #metrics of markduplicates
 
 
 #single gvcf call
 
-output_dir_singl_gvcf: "/data/hamza/test_snakemake_dir/gvcf_files" # output dir for single gvcf
+output_dir_singl_gvcf: results/gvcf_files # output dir for single gvcf
+
+SequenceDictionary : data/SequenceDictionary.dict
 
 #combine gvcf
-COMBINED_GVCF_DIR: "/data/hamza/test_snakemake_dir/gvcf_files/combined_gvcf_file"
-TEMP_DIR: "/data/hamza/test_snakemake_dir/gvcf_files/temporal"
-FINAL_OUTPUT: "/data/hamza/test_snakemake_dir/gvcf_files/SBCC_combined.vcf"
-PER_CHR_OUTPUT_PREFIX: "/data/hamza/test_snakemake_dir/gvcf_files/gvcf_chr_file"
-VCF_WITH_MERGED_COORDS: "/data/hamza/test_snakemake_dir/gvcf_files/SBCC_combined_mergedchromosomes_test.vcf"
-VCF_WITH_MERGED_COORDS_GZ: "/data/hamza/test_snakemake_dir/gvcf_files/SBCC_combined_mergedchromosomes_test.vcf_test.gz"
-VCF_FINAL: "/data/hamza/test_snakemake_dir/gvcf_files/SBCC_combined_mergedchromosomes_final.vcf.gz"
-FILTERED_VCF: "/data/hamza/test_snakemake_dir/filtred_vcf/SBCC_vcf_filtred_dp_5_maf_0.05_missing_0.2_testsnakmake.vcf.gz"
-fastq_input: "/data/hamza/test_snakemake_dir/exome_SBCC"
-quality_check_output: "/data/hamza/test_snakemake_dir/quality_results"
+COMBINED_GVCF_DIR: results/gvcf_files/combined_gvcf_file
+TEMP_DIR: results/gvcf_files/temporal
+FINAL_OUTPUT: results/gvcf_files/SBCC_combined.vcf
+PER_CHR_OUTPUT_PREFIX: results/gvcf_files/gvcf_chr_file
+VCF_WITH_MERGED_COORDS: results/gvcf_files/combined_mergedchromosomes_test.vcf
+VCF_WITH_MERGED_COORDS_GZ: results/gvcf_files/combined_mergedchromosomes_test.vcf_test.gz
+VCF_FINAL: results/gvcf_files/SBCC_combined_mergedchromosomes_final.vcf.gz
+FILTERED_VCF: results/filtred_vcf/SBCC_vcf_filtred_dp_5_maf_0.05_missing_0.2_testsnakmake.vcf.gz
+FILTRED_OUTPUT_DIR: results/filtred_vcf
+fastq_input: data #modified quality  
+quality_check_output: results/quality_check #modified quality
 # BWA tool path
-bwa_path: "/home/contrera/soft/bwa-m2-2.0pre2_x64-linux/bwa-mem2"
+#bwa_path: "/home/contrera/soft/bwa-m2-2.0pre2_x64-linux/bwa-mem2"
 # GATK Path
-GATK: "/home/contrera/soft/gatk-4.3.0.0/gatk-package-4.3.0.0-local.jar"
+GATK: "/home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/gatk-4.6.0.0/gatk"
 # Number of threads
 threads: 20
 threads_variantcall: 7
 
+
+
+
+
+
 # Scripts
-mapping_script: "/home/hamzaamhal/snakemake_pipline2/scripts/02_mapping.sh"
-mark_duplicates_script: "/home/hamzaamhal/snakemake_pipline2/scripts/02_mark_duplicates_sktest.sh"
-variant_calling_script: "/home/hamzaamhal/snakemake_pipline2/scripts/03_variant_calling.single.gvcf.sh"
-genotype_all_script: "/home/hamzaamhal/snakemake_pipline2/scripts/05_genotype_all.sh"
-COMBINE_CHR_SCRIPT: "/home/hamzaamhal/snakemake_pipline2/scripts/06_combine_chr_update_cordinates.sh"
-FILTER_VCF_SCRIPT: "/home/hamzaamhal/snakemake_pipline2/scripts/07_filtervcffile.sh"
-CHECK_QUALITY_SCRIPT: "/home/hamzaamhal/snakemake_pipline2/scripts/01_check_quality.sh"
+mapping_script: "scripts/02_mapping.sh"
+mark_duplicates_script: "scripts/02_mark_duplicates_sktest.sh"
+variant_calling_script: "scripts/03_variant_calling.single.gvcf.sh"
+genotype_all_script: "scripts/05_genotype_all.sh"
+COMBINE_CHR_SCRIPT: "scripts/06_combine_chr_update_cordinates.sh"
+FILTER_VCF_SCRIPT: "scripts/07_filtervcffile.sh"
+CHECK_QUALITY_SCRIPT: "scripts/01_check_quality.sh" # modified quality
+
+
+
+
+
+
+
 # Done and log files
-CHECK_QUALITY_DONE: "/home/hamzaamhal/snakemake_pipline2/output/quality_check_done.txt"
-CHECK_QUALITY_LOG: "/home/hamzaamhal/snakemake_pipline2/logfile/quality_check.log"
-mapping_done: "/home/hamzaamhal/snakemake_pipline2/output/mapping_done.txt"
-mapping_output_log: "/home/hamzaamhal/snakemake_pipline2/logfile/mapping_output.log"
-mark_duplicates_done: "/home/hamzaamhal/snakemake_pipline2/output/mark_duplicates_done.txt"
-mark_duplicates_output_log: "/home/hamzaamhal/snakemake_pipline2/logfile/mark_duplicates_output.log"
-variant_calling_done: "/home/hamzaamhal/snakemake_pipline2/output/variant_calling_done.txt"
-variant_calling_log: "/home/hamzaamhal/snakemake_pipline2/logfile/variant_calling_output.log"
-genotype_all_output: "/home/hamzaamhal/snakemake_pipline2/output/genotype_all_done.txt"
-genotype_all_output_log: "/home/hamzaamhal/snakemake_pipline2/logfile/genotype_all.log"
-COMBINE_CHR_LOG: "/home/hamzaamhal/snakemake_pipline2/logfile/06_combine_chr_update_cordinates.log"
-COMBINE_CHR_DONE: "/home/hamzaamhal/snakemake_pipline2/output/06_combine_chr_update_cordinates.done"
-FILTER_VCF_LOG: "/home/hamzaamhal/snakemake_pipline2/logfile/filter_vcf.log"
-FILTER_VCF_DONE: "/home/hamzaamhal/snakemake_pipline2/output/filter_vcf.done"
+CHECK_QUALITY_DONE: "output/quality_check_done.txt" #modified quality
+CHECK_QUALITY_LOG: "logfile/quality_check.log" #modified quality 
+mapping_done: "output/mapping_done.txt"
+mapping_output_log: "logfile/mapping_output.log"
+mark_duplicates_done: "output/mark_duplicates_done.txt"
+mark_duplicates_output_log: "logfile/mark_duplicates_output.log"
+variant_calling_done: "output/variant_calling_done.txt"
+variant_calling_log: "logfile/variant_calling_output.log"
+genotype_all_output: "output/genotype_all_done.txt"
+genotype_all_output_log: "logfile/genotype_all.log"
+COMBINE_CHR_LOG: "logfile/06_combine_chr_update_cordinates.log"
+COMBINE_CHR_DONE: "output/06_combine_chr_update_cordinates.done"
+FILTER_VCF_LOG: "logfile/filter_vcf.log"
+FILTER_VCF_DONE: "output/filter_vcf.done"
 

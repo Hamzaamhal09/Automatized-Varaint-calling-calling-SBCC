@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Load config from YAML using yq
-CONFIG_FILE="/home/hamzaamhal/snakemake_pipline2/config/config_paths_PHG.yaml"
+CONFIG_FILE="config/config_paths_PHG.yaml"
 
-hvcf_dir=$(yq '.hvcf_dir' "$CONFIG_FILE")
-db_path=$(yq '.db_path' "$CONFIG_FILE")
-index_output_dir=$(yq '.index_output_dir' "$CONFIG_FILE")
-index_prefix=$(yq '.index_prefix' "$CONFIG_FILE")
-phgv2_path=$(yq '.phgv2_path' "$CONFIG_FILE")
+hvcf_dir=$(yq -r '.hvcf_dir' "$CONFIG_FILE")
+db_path=$(yq -r '.db_path' "$CONFIG_FILE")
+index_output_dir=$(yq -r '.index_output_dir' "$CONFIG_FILE")
+index_prefix=$(yq -r '.index_prefix' "$CONFIG_FILE")
+phgv2_path=$(yq -r '.phgv2_path' "$CONFIG_FILE")
 
 # Create output directory if it doesn't exist
 mkdir -p "$index_output_dir"

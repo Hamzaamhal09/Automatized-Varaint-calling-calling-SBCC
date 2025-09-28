@@ -1,0 +1,8 @@
+all
+check_quality
+combine_chr_update_coordinates
+filter_vcf
+genotype_all
+map_reads
+mark_duplicates
+variant_calling

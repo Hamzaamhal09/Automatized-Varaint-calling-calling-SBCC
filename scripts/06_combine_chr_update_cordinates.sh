@@ -9,13 +9,13 @@
 
 # ==== PATH VARIABLES ====
 # Assume config file path is in $config_file
-config_file="/home/hamzaamhal/snakemake_pipline/config/config_paths.yaml"
+config_file="config/config_paths.yaml"
 
-BED_FILE=$(yq eval '.BED_FILE' "$config_file")
-FINAL_OUTPUT=$(yq eval '.FINAL_OUTPUT' "$config_file")
-VCF_WITH_MERGED_COORDS=$(yq eval '.VCF_WITH_MERGED_COORDS' "$config_file")
-VCF_WITH_MERGED_COORDS_GZ=$(yq eval '.VCF_WITH_MERGED_COORDS_GZ' "$config_file")
-VCF_FINAL=$(yq eval '.VCF_FINAL' "$config_file")
+BED_FILE=$(yq -r '.BED_FILE' "$config_file")
+FINAL_OUTPUT=$(yq -r '.FINAL_OUTPUT' "$config_file")
+VCF_WITH_MERGED_COORDS=$(yq -r '.VCF_WITH_MERGED_COORDS' "$config_file")
+VCF_WITH_MERGED_COORDS_GZ=$(yq -r '.VCF_WITH_MERGED_COORDS_GZ' "$config_file")
+VCF_FINAL=$(yq -r '.VCF_FINAL' "$config_file")
 
 
 #======================#
@@ -39,12 +39,60 @@ awk 'FNR==NR{
     }
 }' "$BED_FILE" "$FINAL_OUTPUT" > "$VCF_WITH_MERGED_COORDS"
 
+
+
+
+# Load chromosomes
+# Load chromosomes from config
+# Load chromosomes
+
+# Loop over chromosomes
+# Load chromosomes (without _partX)
+mapfile -t CHROMOSOMES < <(yq -r '.CHROMOSOMES[]' "$config_file" | sed 's/_part[0-9]\+//g' | sort -u)
+
+# Loop over chromosomes and replace all _partX in header
+for CHR in "${CHROMOSOMES[@]}"; do
+    echo "Replacing patterns for chromosome: $CHR"
+    # Print what it will replace
+    grep "ID=${CHR}_part" "$VCF_WITH_MERGED_COORDS"
+    
+    # Replace all _partX with the full chromosome name
+    sed -i "s/ID=${CHR}_part[0-9]\+/ID=${CHR}/g" "$VCF_WITH_MERGED_COORDS"
+done
+
+#!/bin/bash
+
+# Temporary file (not a new VCF variable)
+tmp_file=$(mktemp)
+
+num=$(yq -r '.CHROMOSOMES_length | length' "$config_file")
+
+for ((i=0;i<num;i++)); do
+    chr=$(yq -r ".CHROMOSOMES_length[$i].name" "$config_file")
+    size=$(yq -r ".CHROMOSOMES_length[$i].size" "$config_file")
+
+    echo "Updating length for $chr to $size in $VCF_WITH_MERGED_COORDS"
+
+    sed -i -E "s/(ID=${chr},length=)[0-9]+/\1${size}/g" "$VCF_WITH_MERGED_COORDS"
+done
+
+
+awk '!seen[$0]++' "$VCF_WITH_MERGED_COORDS" > "${VCF_WITH_MERGED_COORDS}.tmp" && mv "${VCF_WITH_MERGED_COORDS}.tmp" "$VCF_WITH_MERGED_COORDS"
+
+
 #======================#
 # Compress & Index     #
 #======================#
+# Load chromosomes from config
+# --- Fix header in-place ---
+
+
+
 
 bgzip -c "$VCF_WITH_MERGED_COORDS" > "$VCF_WITH_MERGED_COORDS_GZ"
-bcftools index -c "$VCF_WITH_MERGED_COORDS_GZ"
+bcftools sort "$VCF_WITH_MERGED_COORDS_GZ" -o "$VCF_WITH_MERGED_COORDS_GZ.sorted"
+
+#bcftools index -c "$VCF_WITH_MERGED_COORDS_GZ"
 
 #======================#
 # Add MISSING/MAF Tags #

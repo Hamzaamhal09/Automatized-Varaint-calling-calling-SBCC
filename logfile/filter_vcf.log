@@ -1,0 +1,63 @@
+Filtering complete. Output saved to results/filtred_vcf/SBCC_vcf_filtred_dp_5_maf_0.05_missing_0.2_testsnakmake.vcf.gz
+scripts/07_filtervcffile.sh: line 23: $OUTPUT_VCF: ambiguous redirect
+
+About:   VCF/BCF conversion, view, subset and filter VCF/BCF files.
+Usage:   bcftools view [options] <in.vcf.gz> [region1 [...]]
+
+Output options:
+    -G, --drop-genotypes              Drop individual genotype information (after subsetting if -s option set)
+    -h, --header-only                 Print only the header in VCF output (equivalent to bcftools head)
+    -H, --no-header                   Suppress the header in VCF output
+        --with-header                 Print both header and records in VCF output [default]
+    -l, --compression-level [0-9]     Compression level: 0 uncompressed, 1 best speed, 9 best compression [-1]
+        --no-version                  Do not append version and command line to the header
+    -o, --output FILE                 Output file name [stdout]
+    -O, --output-type u|b|v|z[0-9]    u/b: un/compressed BCF, v/z: un/compressed VCF, 0-9: compression level [v]
+    -r, --regions REGION              Restrict to comma-separated list of regions
+    -R, --regions-file FILE           Restrict to regions listed in FILE
+        --regions-overlap 0|1|2       Include if POS in the region (0), record overlaps (1), variant overlaps (2) [1]
+    -t, --targets [^]REGION           Similar to -r but streams rather than index-jumps. Exclude regions with "^" prefix
+    -T, --targets-file [^]FILE        Similar to -R but streams rather than index-jumps. Exclude regions with "^" prefix
+        --targets-overlap 0|1|2       Include if POS in the region (0), record overlaps (1), variant overlaps (2) [0]
+        --threads INT                 Use multithreading with INT worker threads [0]
+
+Subset options:
+    -a, --trim-alt-alleles            Trim ALT alleles not seen in the genotype fields (or their subset with -s/-S)
+    -I, --no-update                   Do not (re)calculate INFO fields for the subset (currently INFO/AC and INFO/AN)
+    -s, --samples [^]LIST             Comma separated list of samples to include (or exclude with "^" prefix)
+    -S, --samples-file [^]FILE        File of samples to include (or exclude with "^" prefix)
+        --force-samples               Only warn about unknown subset samples
+
+Filter options:
+    -c/C, --min-ac/--max-ac INT[:TYPE]     Minimum/maximum count for non-reference (nref), 1st alternate (alt1), least frequent
+                                               (minor), most frequent (major) or sum of all but most frequent (nonmajor) alleles [nref]
+    -f,   --apply-filters LIST             Require at least one of the listed FILTER strings (e.g. "PASS,.")
+    -g,   --genotype [^]hom|het|miss       Require one or more hom/het/missing genotype or, if prefixed with "^", exclude such sites
+    -i/e, --include/--exclude EXPR         Select/exclude sites for which the expression is true (see man page for details)
+    -k/n, --known/--novel                  Select known/novel sites only (ID is not/is '.')
+    -m/M, --min-alleles/--max-alleles INT  Minimum/maximum number of alleles listed in REF and ALT (e.g. -m2 -M2 for biallelic sites)
+    -p/P, --phased/--exclude-phased        Select/exclude sites where all samples are phased
+    -q/Q, --min-af/--max-af FLOAT[:TYPE]   Minimum/maximum frequency for non-reference (nref), 1st alternate (alt1), least frequent
+                                               (minor), most frequent (major) or sum of all but most frequent (nonmajor) alleles [nref]
+    -u/U, --uncalled/--exclude-uncalled    Select/exclude sites without a called genotype
+    -v/V, --types/--exclude-types LIST     Select/exclude comma-separated list of variant types: snps,indels,mnps,ref,bnd,other [null]
+    -x/X, --private/--exclude-private      Select/exclude sites where the non-reference alleles are exclusive (private) to the subset samples
+
+
+About:   Index bgzip compressed VCF/BCF files for random access.
+Usage:   bcftools index [options] <in.bcf>|<in.vcf.gz>
+
+Indexing options:
+    -c, --csi                generate CSI-format index for VCF/BCF files [default]
+    -f, --force              overwrite index if it already exists
+    -m, --min-shift INT      set minimal interval size for CSI indices to 2^INT [14]
+    -o, --output FILE        optional output index file name
+    -t, --tbi                generate TBI-format index for VCF files
+        --threads INT        use multithreading with INT worker threads [0]
+
+Stats options:
+    -a, --all            with --stats, print stats for all contigs even when zero
+    -n, --nrecords       print number of records based on existing index file
+    -s, --stats          print per contig stats based on existing index file
+
+Filtering complete. Output saved to 

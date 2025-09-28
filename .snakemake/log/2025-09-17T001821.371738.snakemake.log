@@ -1,0 +1,24 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                count
+---------------  -------
+variant_calling        1
+total                  1
+
+Select jobs to execute...
+
+[Wed Sep 17 00:18:21 2025]
+rule variant_calling:
+    input: scripts/03_variant_calling.single.gvcf.sh
+    output: output/variant_calling_done.txt
+    jobid: 4
+    reason: Missing output files: output/variant_calling_done.txt
+    resources: tmpdir=/tmp
+
+[Wed Sep 17 00:20:25 2025]
+Finished job 4.
+1 of 8 steps (12%) done
+Complete log: .snakemake/log/2025-09-17T001821.371738.snakemake.log

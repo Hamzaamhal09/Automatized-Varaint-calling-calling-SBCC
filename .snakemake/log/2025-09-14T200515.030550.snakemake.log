@@ -1,0 +1,24 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count
+---------  -------
+map_reads        1
+total            1
+
+Select jobs to execute...
+
+[Sun Sep 14 20:05:15 2025]
+rule map_reads:
+    input: scripts/02_mapping.sh
+    output: output/mapping_done.txt
+    jobid: 0
+    reason: Missing output files: output/mapping_done.txt
+    resources: tmpdir=/tmp
+
+[Sun Sep 14 20:05:16 2025]
+Finished job 0.
+1 of 8 steps (12%) done
+Complete log: .snakemake/log/2025-09-14T200515.030550.snakemake.log

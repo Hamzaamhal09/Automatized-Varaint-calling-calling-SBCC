@@ -1,0 +1,3 @@
+NameError in file /home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/snakemakepipline.smk, line 11:
+name 'config_general' is not defined
+  File "/home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/snakemakepipline.smk", line 11, in <module>

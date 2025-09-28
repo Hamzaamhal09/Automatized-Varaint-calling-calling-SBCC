@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Path to the config file
-CONFIG_FILE="/home/hamzaamhal/snakemake_pipline2/config/config_paths_PHG.yaml"
+CONFIG_FILE="config/config_paths_PHG.yaml"
 
 # Extract variables using yq
-phgv2_path=$(yq '.phgv2_path' "$CONFIG_FILE")
-hvcf_dir=$(yq '.hvcf_dir' "$CONFIG_FILE")
-path_keyfile=$(yq '.path_keyfile' "$CONFIG_FILE")
-reference_genome=$(yq '.reference_genome' "$CONFIG_FILE")
-outputdir_find_paths=$(yq '.outputdir_find_paths' "$CONFIG_FILE")
+phgv2_path=$(yq -r '.phgv2_path' "$CONFIG_FILE")
+hvcf_dir=$(yq -r '.hvcf_dir' "$CONFIG_FILE")
+path_keyfile=$(yq -r '.path_keyfile' "$CONFIG_FILE")
+reference_genome=$(yq -r '.reference_genome' "$CONFIG_FILE")
+outputdir_find_paths=$(yq -r '.outputdir_find_paths' "$CONFIG_FILE")
 
 
 # Create output directory if it doesn't exist

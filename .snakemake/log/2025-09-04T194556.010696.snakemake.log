@@ -1,0 +1,6 @@
+Building DAG of jobs...
+MissingInputException in rule map_reads in file /home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/snakemakepipline.smk, line 62:
+Missing input files for rule map_reads:
+    output: /home/hamzaamhal/snakemake_pipline2/output/mapping_done.txt
+    affected files:
+        /home/hamzaamhal/snakemake_pipline2/scripts/02_mapping.sh

@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count
+------------  -------
+genotype_all        1
+total               1
+
+Select jobs to execute...
+
+[Tue Sep 16 18:31:43 2025]
+rule genotype_all:
+    input: scripts/05_genotype_all.sh
+    output: output/genotype_all_done.txt
+    jobid: 5
+    reason: Missing output files: output/genotype_all_done.txt
+    resources: tmpdir=/tmp
+
+[Tue Sep 16 18:31:44 2025]
+Error in rule genotype_all:
+    jobid: 5
+    input: scripts/05_genotype_all.sh
+    output: output/genotype_all_done.txt
+    shell:
+        
+        nohup bash scripts/05_genotype_all.sh > logfile/genotype_all.log 2>&1
+        touch output/genotype_all_done.txt
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-09-16T183143.153482.snakemake.log

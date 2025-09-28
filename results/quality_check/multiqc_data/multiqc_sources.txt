@@ -1,0 +1,3 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	A_1_20_1	/home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/results/quality_check/A_1_20_1_fastqc.zip
+FastQC	all_sections	A_1_20_2	/home/hamza/Automatized-Varaint-calling-and-haplotype-calling-SBCC-/results/quality_check/A_1_20_2_fastqc.zip

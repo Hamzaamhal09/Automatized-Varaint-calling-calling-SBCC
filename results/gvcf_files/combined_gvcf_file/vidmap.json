@@ -1,0 +1,278 @@
+{
+  "fields": [{
+    "name": "ID",
+    "type": ["char"],
+    "length": [{
+      "variable_length_descriptor": "var"
+    }]
+  }, {
+    "name": "LowQual",
+    "type": ["Integer"],
+    "vcf_field_class": ["FILTER"],
+    "length": [{
+      "variable_length_descriptor": "1"
+    }]
+  }, {
+    "name": "AD",
+    "type": ["Integer"],
+    "vcf_field_class": ["FORMAT"],
+    "length": [{
+      "variable_length_descriptor": "R"
+    }]
+  }, {
+    "name": "DP",
+    "type": ["Integer"],
+    "vcf_field_class": ["FORMAT", "INFO"],
+    "length": [{
+      "variable_length_descriptor": "1"
+    }]
+  }, {
+    "name": "GQ",
+    "type": ["Integer"],
+    "vcf_field_class": ["FORMAT"],
+    "length": [{
+      "variable_length_descriptor": "1"
+    }]
+  }, {
+    "name": "GT",
+    "type": ["int"],
+    "vcf_field_class": ["FORMAT"],
+    "length": [{
+      "variable_length_descriptor": "PP"
+    }]
+  }, {
+    "name": "MIN_DP",
+    "type": ["Integer"],
+    "vcf_field_class": ["FORMAT"],
+    "length": [{
+      "variable_length_descriptor": "1"
+    }]
+  }, {
+    "name": "PGT",
+    "type": ["String"],
+    "vcf_field_class": ["FORMAT"],
+    "length": [{
+      "variable_length_descriptor": "var"
+    }]
+  }, {
+    "name": "PID",
+    "type": ["String"],
+    "vcf_field_class": ["FORMAT"],
+    "length": [{
+      "variable_length_descriptor": "var"
+    }]
+  }, {
+    "name": "PL",
+    "type": ["Integer"],
+    "vcf_field_class": ["FORMAT"],
+    "length": [{
+      "variable_length_descriptor": "G"
+    }]
+  }, {
+    "name": "PS",
+    "type": ["Integer"],
+    "vcf_field_class": ["FORMAT"],
+    "length": [{
+      "variable_length_descriptor": "1"
+    }]
+  }, {
+    "name": "SB",
+    "type": ["Integer"],
+    "vcf_field_class": ["FORMAT"],
+    "length": [{
+      "variable_length_descriptor": "4"
+    }]
+  }, {
+    "name": "AS_InbreedingCoeff",
+    "type": ["Float"],
+    "vcf_field_class": ["INFO"],
+    "length": [{
+      "variable_length_descriptor": "A"
+    }]
+  }, {
+    "name": "AS_QD",
+    "type": ["Float"],
+    "vcf_field_class": ["INFO"],
+    "length": [{
+      "variable_length_descriptor": "A"
+    }]
+  }, {
+    "name": "AS_RAW_BaseQRankSum",
+    "type": ["float", "int"],
+    "vcf_field_class": ["INFO"],
+    "length": [{
+      "variable_length_descriptor": "R"
+    }, {
+      "variable_length_descriptor": "var"
+    }],
+    "vcf_delimiter": ["|", ","],
+    "VCF_field_combine_operation": "histogram_sum"
+  }, {
+    "name": "AS_RAW_MQ",
+    "type": ["float"],
+    "vcf_field_class": ["INFO"],
+    "length": [{
+      "variable_length_descriptor": "R"
+    }, {
+      "variable_length_descriptor": "var"
+    }],
+    "vcf_delimiter": ["|", ","],
+    "VCF_field_combine_operation": "element_wise_sum",
+    "disable_remap_missing_with_non_ref": true
+  }, {
+    "name": "AS_RAW_MQRankSum",
+    "type": ["float", "int"],
+    "vcf_field_class": ["INFO"],
+    "length": [{
+      "variable_length_descriptor": "R"
+    }, {
+      "variable_length_descriptor": "var"
+    }],
+    "vcf_delimiter": ["|", ","],
+    "VCF_field_combine_operation": "histogram_sum"
+  }, {
+    "name": "AS_RAW_ReadPosRankSum",
+    "type": ["float", "int"],
+    "vcf_field_class": ["INFO"],
+    "length": [{
+      "variable_length_descriptor": "R"
+    }, {
+      "variable_length_descriptor": "var"
+    }],
+    "vcf_delimiter": ["|", ","],
+    "VCF_field_combine_operation": "histogram_sum"
+  }, {
+    "name": "AS_SB_TABLE",
+    "type": ["int"],
+    "vcf_field_class": ["INFO"],
+    "length": [{
+      "variable_length_descriptor": "R"
+    }, {
+      "variable_length_descriptor": "var"
+    }],
+    "vcf_delimiter": ["|", ","],
+    "VCF_field_combine_operation": "element_wise_sum",
+    "disable_remap_missing_with_non_ref": true
+  }, {
+    "name": "BaseQRankSum",
+    "type": ["Float"],
+    "vcf_field_class": ["INFO"],
+    "length": [{
+      "variable_length_descriptor": "1"
+    }]
+  }, {
+    "name": "END",
+    "type": ["Integer"],
+    "vcf_field_class": ["INFO"],
+    "length": [{
+      "variable_length_descriptor": "1"
+    }]
+  }, {
+    "name": "ExcessHet",
+    "type": ["Float"],
+    "vcf_field_class": ["INFO"],
+    "length": [{
+      "variable_length_descriptor": "1"
+    }]
+  }, {
+    "name": "InbreedingCoeff",
+    "type": ["Float"],
+    "vcf_field_class": ["INFO"],
+    "length": [{
+      "variable_length_descriptor": "1"
+    }]
+  }, {
+    "name": "MLEAC",
+    "type": ["Integer"],
+    "vcf_field_class": ["INFO"],
+    "length": [{
+      "variable_length_descriptor": "A"
+    }]
+  }, {
+    "name": "MLEAF",
+    "type": ["Float"],
+    "vcf_field_class": ["INFO"],
+    "length": [{
+      "variable_length_descriptor": "A"
+    }]
+  }, {
+    "name": "MQRankSum",
+    "type": ["Float"],
+    "vcf_field_class": ["INFO"],
+    "length": [{
+      "variable_length_descriptor": "1"
+    }]
+  }, {
+    "name": "RAW_MQandDP",
+    "type": ["Integer"],
+    "vcf_field_class": ["INFO"],
+    "length": [{
+      "variable_length_descriptor": "2"
+    }],
+    "VCF_field_combine_operation": "element_wise_sum"
+  }, {
+    "name": "ReadPosRankSum",
+    "type": ["Float"],
+    "vcf_field_class": ["INFO"],
+    "length": [{
+      "variable_length_descriptor": "1"
+    }]
+  }],
+  "contigs": [{
+    "name": "chr1H_part1",
+    "length": "30000000",
+    "tiledb_column_offset": "0"
+  }, {
+    "name": "chr1H_part2",
+    "length": "30000000",
+    "tiledb_column_offset": "30000000"
+  }, {
+    "name": "chr2H_part1",
+    "length": "30000000",
+    "tiledb_column_offset": "60000000"
+  }, {
+    "name": "chr2H_part2",
+    "length": "30000000",
+    "tiledb_column_offset": "90000000"
+  }, {
+    "name": "chr3H_part1",
+    "length": "30000000",
+    "tiledb_column_offset": "120000000"
+  }, {
+    "name": "chr3H_part2",
+    "length": "30000000",
+    "tiledb_column_offset": "150000000"
+  }, {
+    "name": "chr4H_part1",
+    "length": "30000000",
+    "tiledb_column_offset": "180000000"
+  }, {
+    "name": "chr4H_part2",
+    "length": "30000000",
+    "tiledb_column_offset": "210000000"
+  }, {
+    "name": "chr5H_part1",
+    "length": "30000000",
+    "tiledb_column_offset": "240000000"
+  }, {
+    "name": "chr5H_part2",
+    "length": "30000000",
+    "tiledb_column_offset": "270000000"
+  }, {
+    "name": "chr6H_part1",
+    "length": "30000000",
+    "tiledb_column_offset": "300000000"
+  }, {
+    "name": "chr6H_part2",
+    "length": "30000000",
+    "tiledb_column_offset": "330000000"
+  }, {
+    "name": "chr7H_part1",
+    "length": "30000000",
+    "tiledb_column_offset": "360000000"
+  }, {
+    "name": "chr7H_part2",
+    "length": "30000000",
+    "tiledb_column_offset": "390000000"
+  }]
+}

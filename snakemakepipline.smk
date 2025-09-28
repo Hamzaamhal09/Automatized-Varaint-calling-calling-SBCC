@@ -1,15 +1,15 @@
 import yaml
 
 # Load general config
-with open("/home/hamzaamhal/snakemake_pipline2/config/config.yaml") as f:
+with open("config/config.yaml") as f:
     config_general = yaml.safe_load(f)
 
 # Load path config
-with open("/home/hamzaamhal/snakemake_pipline2/config/config_paths.yaml") as f:
+with open("config/config_paths.yaml") as f:
     config_paths = yaml.safe_load(f)
 
 # Set the active config file
-configfile: "/home/hamzaamhal/snakemake_pipline2/config/config_paths.yaml"
+configfile: "config/config_paths.yaml"
 
 # Input values
 samples_name = config_general["samples_name"]

@@ -1,0 +1,24 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                count
+---------------  -------
+mark_duplicates        1
+total                  1
+
+Select jobs to execute...
+
+[Mon Sep 15 15:26:16 2025]
+rule mark_duplicates:
+    input: scripts/02_mark_duplicates_sktest.sh
+    output: output/mark_duplicates_done.txt
+    jobid: 3
+    reason: Missing output files: output/mark_duplicates_done.txt
+    resources: tmpdir=/tmp
+
+[Mon Sep 15 15:26:16 2025]
+Finished job 3.
+1 of 7 steps (14%) done
+Complete log: .snakemake/log/2025-09-15T152616.314209.snakemake.log

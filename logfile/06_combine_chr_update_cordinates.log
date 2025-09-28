@@ -1,0 +1,32 @@
+Replacing patterns for chromosome: chr1H
+##contig=<ID=chr1H_part1,length=30000000>
+##contig=<ID=chr1H_part2,length=30000000>
+Replacing patterns for chromosome: chr2H
+##contig=<ID=chr2H_part1,length=30000000>
+##contig=<ID=chr2H_part2,length=30000000>
+Replacing patterns for chromosome: chr3H
+##contig=<ID=chr3H_part1,length=30000000>
+##contig=<ID=chr3H_part2,length=30000000>
+Replacing patterns for chromosome: chr4H
+##contig=<ID=chr4H_part1,length=30000000>
+##contig=<ID=chr4H_part2,length=30000000>
+Replacing patterns for chromosome: chr5H
+##contig=<ID=chr5H_part1,length=30000000>
+##contig=<ID=chr5H_part2,length=30000000>
+Replacing patterns for chromosome: chr6H
+##contig=<ID=chr6H_part1,length=30000000>
+##contig=<ID=chr6H_part2,length=30000000>
+Replacing patterns for chromosome: chr7H
+##contig=<ID=chr7H_part1,length=30000000>
+##contig=<ID=chr7H_part2,length=30000000>
+Updating length for chr1H to 60000000 in results/gvcf_files/combined_mergedchromosomes_test.vcf
+Updating length for chr2H to 60000000 in results/gvcf_files/combined_mergedchromosomes_test.vcf
+Updating length for chr3H to 60000000 in results/gvcf_files/combined_mergedchromosomes_test.vcf
+Updating length for chr4H to 60000000 in results/gvcf_files/combined_mergedchromosomes_test.vcf
+Updating length for chr5H to 60000000 in results/gvcf_files/combined_mergedchromosomes_test.vcf
+Updating length for chr6H to 60000000 in results/gvcf_files/combined_mergedchromosomes_test.vcf
+Updating length for chr7H to 60000000 in results/gvcf_files/combined_mergedchromosomes_test.vcf
+Writing to /tmp/bcftools.CvPpsC
+Merging 1 temporary files
+Cleaning
+Done
