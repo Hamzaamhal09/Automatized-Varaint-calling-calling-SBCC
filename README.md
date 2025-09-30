@@ -96,7 +96,7 @@ conda install -c bioconda bcftools
 ```
 
 
-
+# Running the Pipeline
 
 the snakemakepipline.smk script performs the full variant discovery workflow using GATK haplotype caller :
 
@@ -121,6 +121,34 @@ the snakemakepipline.smk script performs the full variant discovery workflow usi
     filter_vcf
     Applies quality-based filtering to the final VCF files.
 
-    Imputation and Phasing (upcoming)
+
+    Run the full pipeline
+
+- First you will have to check the 
+
+From the project root directory, run:
+
+```
+snakemake -s snakemakepipline.smk --cores 4
+
+```
+
+Run individual steps
+
+You can also run a specific step (rule) only:
+
+```
+snakemake -s snakemakepipline.smk <rule_name> --cores 4
+
+```
+
+
+For example:
+
+```
+snakemake -s snakemakepipline.smk map_reads --cores 4
+
+```
+
 
 
