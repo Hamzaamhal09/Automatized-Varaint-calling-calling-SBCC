@@ -10,8 +10,6 @@ The pipeline can be executed in several ways:
 
 - Direct execution: Run each component individually using the corresponding scripts in the scripts/ directory.
 
-the pipline is accompined with small datatset in the folder data folder to test pipline that can be run from a normal laptop (AT least 16 GB of RAM ) :
-
 # Test Dataset
 
 To facilitate testing, the repository includes a small dataset in the data/ folder. This dataset is designed to run on a standard laptop with at least 16 GB of RAM.
