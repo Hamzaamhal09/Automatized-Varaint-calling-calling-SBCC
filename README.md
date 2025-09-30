@@ -1,12 +1,37 @@
 # Pipeline Overview
 
-This is a preliminary release of the pipeline. You can:
+This repository contains a preliminary release of an automated variant-calling pipeline.
 
-    Run the entire pipeline via the provided .smk (Snakemake file) or Execute individual steps from the .smk file
+The pipeline can be executed in several ways:
 
-    Run each component directly from the corresponding scripts in the scripts/ directory.
+- Full run: Execute the entire workflow using the provided .smk (Snakemake) file.
 
-You can first downod the whole repository using 
+- Stepwise execution: Run specific steps by selecting them directly from the .smk file.
+
+- Direct execution: Run each component individually using the corresponding scripts in the scripts/ directory.
+
+the pipline is accompined with small datatset in the folder data folder to test pipline that can be run from a normal laptop (AT least 16 GB of RAM ) :
+
+# Test Dataset
+
+To facilitate testing, the repository includes a small dataset in the data/ folder. This dataset is designed to run on a standard laptop with at least 16 GB of RAM.
+
+Files included:
+
+- A_1_20_1.fastq.gz – Example paired-end read (R1).
+
+- A_1_20_2.fastq.gz – Example paired-end read (R2).
+
+- barley_test_7chr_60Mb.fa – A reduced reference genome derived from barley MorexV3.
+
+The first 60 Mb of each chromosome was extracted to create a simplified “mini-genome” for quick testing.
+
+Since GATK requires an even number of chromosomes, each chromosome was split into two parts. In this test case, barley (7 chromosomes) was converted into 14 pseudo-chromosomes.For other species, this step may not be necessary.
+
+
+
+
+You can first downod the whole repository using
 
 ```
 git clone https://github.com/Hamzaamhal09/Automatized-Varaint-calling-calling-SBCC.git
