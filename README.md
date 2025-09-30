@@ -147,22 +147,23 @@ ST459_174:1 A_1_20 ST459_174:1 ILUMINA SBCC056 data/A_1_20_1.fastq.gz data/A_1_2
 
 - Sample ID / Read group – ST459_174:1
 
-- Short sample name – A_1_20
+    - Short sample name – A_1_20
 
-- Read group ID – ST459_174:1
+    - Read group ID – ST459_174:1
 
-- Sequencing platform – ILUMINA
+    - Sequencing platform – ILUMINA
 
-- Sample Name – SBCC056
+    - Sample Name – SBCC056
 
-- FASTQ file (R1) – data/A_1_20_1.fastq.gz
+    - FASTQ file (R1) – data/A_1_20_1.fastq.gz
 
-- FASTQ file (R2) – data/A_1_20_2.fastq.gz
+    - FASTQ file (R2) – data/A_1_20_2.fastq.gz
 
 
 
 
 - bedfile_fullchr.bed file is essentially a chromosome-splitting table that defines how each chromosome is divided into parts for the pipeline
+
 
 ```
 chr1H_part1 0 30000000 chr1H 0 30000000
