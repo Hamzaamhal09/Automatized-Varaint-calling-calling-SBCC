@@ -198,27 +198,35 @@ chr7H_part2 0 30000000 chr7H 30000000 60000000
       - chrom_end – End position on the reference chromosome.
 
 
-
-
-
+-interval2.list this file defines the range of the split chromosomes it contanis the split chrosomes name start and end :
 
 ```
+chr1H_part1:1-30000000
+chr1H_part2:1-30000000
+chr2H_part1:1-30000000
+chr2H_part2:1-30000000
+chr3H_part1:1-30000000
+chr3H_part2:1-30000000
+chr4H_part1:1-30000000
+chr4H_part2:1-30000000
+chr5H_part1:1-30000000
+chr5H_part2:1-30000000
+chr6H_part1:1-30000000
+chr6H_part2:1-30000000
+chr7H_part1:1-30000000
+chr7H_part2:1-30000000
+```
+- Variant_calling_list.txt defines the names of the analyzed samples for Variant calling 
 
 ```
+SBCC056
+```
+- cohort.sample_map.list defines the analyzed sample and the location of the produced signle gvcf file
+  
+```
+SBCC056 results/gvcf_files/SBCC056.g.vcf
 
 ```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-
 
 
 
