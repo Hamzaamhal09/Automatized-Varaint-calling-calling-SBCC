@@ -79,7 +79,8 @@ conda install -c bioconda picard
 ```
 Install **GATK** for variant calling :
 ```
-conda install -c bioconda gatk
+wget -q https://github.com/broadinstitute/gatk/releases/download/4.6.2.0/gatk-4.6.2.0.zip && unzip -q gatk-4.6.2.0.zip
+
 ```
 
 Install **bcftools** :
