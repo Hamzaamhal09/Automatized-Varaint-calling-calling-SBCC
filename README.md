@@ -137,7 +137,32 @@ bedfile_fullchr.bed  cohort.sample_map.list  INFO_FILE_FINAL.txt  interval2.list
 
 ```
 
-bedfile_fullchr.bed file is essentially a chromosome-splitting table that defines how each chromosome is divided into parts for the pipeline
+- INFO_FILE_FINAL.txt file is essential for mapping the reads to our reference genome it defines the sequenced samples and its associated metadata for the pipeline
+
+
+
+```
+ST459_174:1 A_1_20 ST459_174:1 ILUMINA SBCC056 data/A_1_20_1.fastq.gz data/A_1_20_2.fastq.gz
+```
+
+- Sample ID / Read group – ST459_174:1
+
+- Short sample name – A_1_20
+
+- Read group ID – ST459_174:1
+
+- Sequencing platform – ILUMINA
+
+- Sample Name – SBCC056
+
+- FASTQ file (R1) – data/A_1_20_1.fastq.gz
+
+- FASTQ file (R2) – data/A_1_20_2.fastq.gz
+
+
+
+
+- bedfile_fullchr.bed file is essentially a chromosome-splitting table that defines how each chromosome is divided into parts for the pipeline
 
 ```
 chr1H_part1 0 30000000 chr1H 0 30000000
@@ -170,6 +195,31 @@ chr7H_part2 0 30000000 chr7H 30000000 60000000
 - chrom_start – Start position on the reference chromosome.
 
 - chrom_end – End position on the reference chromosome.
+
+
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+
+
+
+
+
+
 
 
 From the project root directory, run:
