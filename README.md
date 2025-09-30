@@ -2,13 +2,16 @@
 
 This is a preliminary release of the pipeline. You can:
 
-    Run the entire pipeline via the provided .smk (Snakemake) files,
-
-    Execute individual steps from the .smk files, or
+    Run the entire pipeline via the provided .smk (Snakemake file) or Execute individual steps from the .smk file
 
     Run each component directly from the corresponding scripts in the scripts/ directory.
 
- 
+You can first downod the whole repository using 
+
+```
+git clone https://github.com/Hamzaamhal09/Automatized-Varaint-calling-calling-SBCC.git
+
+```
 
 the snakemakepipline.smk script performs the full variant discovery workflow using GATK haplotype caller :
 
