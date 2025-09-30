@@ -130,20 +130,46 @@ First Enter to the info_files directory:
 cd info_files
 ```
 
-
+Check the contents of the directory: you will find 5 different files that need to be customized in order to run the pipeline with your own data.
 ```
 ls
 bedfile_fullchr.bed  cohort.sample_map.list  INFO_FILE_FINAL.txt  interval2.list  Variant_calling_list.txt
 
-
 ```
 
+bedfile_fullchr.bed file is essentially a chromosome-splitting table that defines how each chromosome is divided into parts for the pipeline
+
 ```
-```
+chr1H_part1 0 30000000 chr1H 0 30000000
+chr1H_part2 0 30000000 chr1H 30000000 60000000
+chr2H_part1 0 30000000 chr2H 0 30000000
+chr2H_part2 0 30000000 chr2H 30000000 60000000
+chr3H_part1 0 30000000 chr3H 0 30000000
+chr3H_part2 0 30000000 chr3H 30000000 60000000
+chr4H_part1 0 30000000 chr4H 0 30000000
+chr4H_part2 0 30000000 chr4H 30000000 60000000
+chr5H_part1 0 30000000 chr5H 0 30000000
+chr5H_part2 0 30000000 chr5H 30000000 60000000
+chr6H_part1 0 30000000 chr6H 0 30000000
+chr6H_part2 0 30000000 chr6H 30000000 60000000
+chr7H_part1 0 30000000 chr7H 0 30000000
+chr7H_part2 0 30000000 chr7H 30000000 60000000
 
 ```
 ```
+<segment_name> <start_offset> <length> <chromosome_name> <chrom_start> <chrom_end>
+```
+- segment_name – Name of the chromosome segment (e.g., chr1H_part1).
 
+- start_offset – Offset within the segment (usually 0 for all segments).
+
+- length – Length of the segment (e.g., 30000000 bases).
+
+- chromosome_name – Original chromosome name from the reference (e.g., chr1H).
+
+- chrom_start – Start position on the reference chromosome.
+
+- chrom_end – End position on the reference chromosome.
 
 
 From the project root directory, run:
