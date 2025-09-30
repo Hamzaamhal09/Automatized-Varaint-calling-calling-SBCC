@@ -185,17 +185,17 @@ chr7H_part2 0 30000000 chr7H 30000000 60000000
 ```
 <segment_name> <start_offset> <length> <chromosome_name> <chrom_start> <chrom_end>
 ```
-   - segment_name – Name of the chromosome segment (e.g., chr1H_part1).
+      - segment_name – Name of the chromosome segment (e.g., chr1H_part1).
 
-   - start_offset – Offset within the segment (usually 0 for all segments).
+      - start_offset – Offset within the segment (usually 0 for all segments).
 
-   - length – Length of the segment (e.g., 30000000 bases).
+      - length – Length of the segment (e.g., 30000000 bases).
 
-   - chromosome_name – Original chromosome name from the reference (e.g., chr1H).
+      - chromosome_name – Original chromosome name from the reference (e.g., chr1H).
 
-   - chrom_start – Start position on the reference chromosome.
+      - chrom_start – Start position on the reference chromosome.
 
-   - chrom_end – End position on the reference chromosome.
+      - chrom_end – End position on the reference chromosome.
 
 
 
