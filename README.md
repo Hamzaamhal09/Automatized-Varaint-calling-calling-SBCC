@@ -38,8 +38,12 @@ To get started, first download the entire repository by cloning it:
 git clone https://github.com/Hamzaamhal09/Automatized-Varaint-calling-calling-SBCC.git
 
 ```
+Then move into the project directory:
 
+```
+cd Automatized-Varaint-calling-calling-SBCC
 
+```
 
 the snakemakepipline.smk script performs the full variant discovery workflow using GATK haplotype caller :
 
