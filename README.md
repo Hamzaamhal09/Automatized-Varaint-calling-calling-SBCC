@@ -1,6 +1,6 @@
 # Pipeline Overview
 
-This repository contains a preliminary release of an automated variant-calling pipeline.
+This repository contains a preliminary release of an automated variant-calling pipeline using GATK.
 
 The pipeline can be executed in several ways:
 
@@ -96,7 +96,7 @@ conda install -c bioconda bcftools
 ```
 
 
-# Running the Pipeline
+# Quick Overview
 
 the snakemakepipline.smk script performs the full variant discovery workflow using GATK haplotype caller :
 
@@ -122,9 +122,29 @@ the snakemakepipline.smk script performs the full variant discovery workflow usi
     Applies quality-based filtering to the final VCF files.
 
 
-    Run the full pipeline
+# Run the full pipeline
 
-- First you will have to check the 
+First Enter to the info_files directory:
+
+```
+cd info_files
+```
+
+
+```
+ls
+bedfile_fullchr.bed  cohort.sample_map.list  INFO_FILE_FINAL.txt  interval2.list  Variant_calling_list.txt
+
+
+```
+
+```
+```
+
+```
+```
+
+
 
 From the project root directory, run:
 
