@@ -33,11 +33,11 @@ Since GATK requires an even number of chromosomes, each chromosome was split int
 To get started, first download the entire repository by cloning it:
 
 
-...
+```
 
 git clone https://github.com/Hamzaamhal09/Automatized-Varaint-calling-calling-SBCC.git
 
-...
+```
 
 
 
